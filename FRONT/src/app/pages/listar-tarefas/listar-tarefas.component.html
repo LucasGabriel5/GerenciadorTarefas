@@ -1,0 +1,26 @@
+<p>Lista de Tarefas</p>
+
+<table id="table">
+    <tr>
+      <th>TarefaId</th>
+      <th>Titulo</th>
+      <th>descrição</th>
+      <th>criadoEm</th>
+      <th>Categoria</th>
+      <th>status</th>
+  
+    </tr>
+    <tr *ngFor="let u of tarefas">
+      <td>{{ u.tarefaId }}</td>
+      <td>{{ u.titulo }}</td>
+      <td>{{ u.descricao }}</td>
+      <td>{{ u.criadoEm }}</td>
+      <td><ul><li>{{ u.categoria.nome }}</li></ul></td>
+      <td>{{ u.status }}</td>
+      <td>
+        <button (click)="alterarStatus(u)">Alterar</button>
+      </td>
+    </tr>
+  </table>
+
+

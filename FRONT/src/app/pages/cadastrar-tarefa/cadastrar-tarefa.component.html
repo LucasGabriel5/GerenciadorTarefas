@@ -1,0 +1,16 @@
+<p>cadastrar-tarefa works!</p>
+
+<div>
+    <label for="titulo">Titulo da tarefa:</label>
+    <input id="titulo" [(ngModel)]="titulo" name="titulo" />
+
+    <label for="descricao">Descricao da tarefa:</label>
+    <input id="descricao" [(ngModel)]="descricao" name="descricao" />
+  
+    <label for="categoria">Categorias:</label>
+    <select id="categoria" [(ngModel)]="categoriaId" name="categoria">
+      <option *ngFor="let cat of categorias" [value]="cat.categoriaId">{{cat.nome}}</option>
+    </select>
+  
+    <button (click)="cadastrarTarefa()">Cadastrar Tarefa</button>
+  </div>

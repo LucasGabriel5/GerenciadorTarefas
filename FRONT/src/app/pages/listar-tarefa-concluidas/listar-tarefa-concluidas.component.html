@@ -1,0 +1,21 @@
+<p>listar-tarefa-concluidas works!</p>
+
+<table id="table">
+    <tr>
+      <th>TarefaId</th>
+      <th>Titulo</th>
+      <th>descrição</th>
+      <th>criadoEm</th>
+      <th>Categoria</th>
+      <th>status</th>
+  
+    </tr>
+    <tr *ngFor="let u of tarefasConcluida">
+      <td>{{ u.tarefaId }}</td>
+      <td>{{ u.titulo }}</td>
+      <td>{{ u.descricao }}</td>
+      <td>{{ u.criadoEm }}</td>
+      <td><ul><li>{{ u.categoria.nome }}</li></ul></td>
+      <td>{{ u.status }}</td>
+    </tr>
+  </table>
